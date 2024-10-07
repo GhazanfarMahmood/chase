@@ -1,0 +1,119 @@
+.slider-container {
+  margin: 1.125em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.115em;
+    font-weight: 300;
+    text-align: center;
+    @media (max-width: 570px) {
+      font-size: 2em;
+      line-height: 1.188em;
+    }
+  }
+
+  .slider-box {
+    padding: 0.625em 0 0 0;
+    width: 100%;
+
+    .slider-card {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--link-color);
+
+      &:hover {
+        color: var(--on-hover-primary-color);
+      }
+
+      svg {
+        color: var(--icon-color);
+        font-size: 3em;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 1.125em;
+        line-height: 1.333em;
+        font-weight: 600;
+        margin: 0.5em 0 0.25em 0;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+
+    .slick-slider {
+      padding-bottom: 16px;
+      .slick-list {
+        width: 80%;
+        margin: 0 auto;
+
+        @media (max-width: 570px) {
+          width: 97%;
+        }
+      }
+    }
+
+    // slider dots css overwrite
+    .slick-dots {
+      li {
+        button {
+          border: 1px solid var(--font-color-2);
+          border-radius: 50%;
+          height: 10px;
+          width: 10px;
+          font-size: 6px;
+          line-height: 22px;
+          &::before {
+            content: "";
+          }
+        }
+      }
+      .slick-active {
+        button {
+          border: 1px solid var(--primary-color);
+          background-color: var(--primary-color);
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
+
+    //slider arrow css overwrite
+
+    .slick-arrow {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 570px) {
+        display: none !important;
+      }
+      svg {
+        font-size: 70px;
+        color: var(--font-color-2);
+        line-height: 1;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+      &::before {
+        content: " ";
+      }
+    }
+
+    .slick-prev {
+      left: 26px;
+    }
+    .slick-next {
+      right: 26px;
+    }
+  }
+}

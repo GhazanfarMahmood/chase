@@ -1,0 +1,251 @@
+.main-container {
+  background: url("../../assets/blueBgImg.jpg");
+  color: var(--light-color);
+  height: 25em;
+  width: 100%;
+  position: relative;
+
+  @media (max-width: 475px) {
+    height: 18em;
+  }
+
+  .main-box {
+    background-color: var(--light-color);
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+  }
+
+  .main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    .main-section-width {
+      width: 75em;
+
+      @media (max-width: 1230px) {
+        width: 100%;
+      }
+      .main-item {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .main-card {
+          display: flex;
+          align-items: start;
+          width: 65%;
+
+          @media (max-width: 990px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+          }
+          h1 {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 1;
+            width: 200px;
+            height: auto;
+            margin-right: 16px;
+            span {
+              font-size: 1.3rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 3.5rem;
+            }
+            @media (max-width: 475px) {
+              font-size: 2.8rem;
+            }
+          }
+          .main-text {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            width: 350px;
+            p {
+              font-size: 36px;
+              font-weight: 600;
+              line-height: 1.15em;
+              margin: 0 0 0.5em 0;
+              @media (max-width: 768px) {
+                font-size: 22px;
+              }
+
+              @media (max-width: 478px) {
+                font-size: 16px;
+              }
+
+              &:last-child {
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0 0 0.625em 0;
+                line-height: 1.3em;
+
+                @media (max-width: 768px) {
+                  font-size: 14px;
+                }
+                @media (max-width: 768px) {
+                  font-size: 12px;
+                }
+              }
+            }
+            div {
+              p {
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0 0 0.625em 0;
+                line-height: 1.3em;
+              }
+            }
+
+            button {
+              background: var(--secondary-color);
+              color: var(--light-color);
+              outline: none;
+              border: none;
+              padding: 0.75em 1.1rem;
+              font-weight: 600;
+              text-align: center;
+              border-radius: 0.313em;
+              cursor: pointer;
+
+              transition: all 0.4s ease;
+
+              &:hover {
+                background-color: var(--on-hover-secondary-color);
+              }
+            }
+          }
+        }
+        .second-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: var(--light-color);
+          border: 1px solid var(--border-color);
+          border-radius: 5px;
+          width: 21.25em;
+          height: 21.3125em;
+          padding: 0.6em 1em;
+          background-color: var(--light-color);
+
+          @media (max-width: 990px) {
+            display: none;
+          }
+
+          .second-item {
+            h2 {
+              font-size: 1.5rem;
+              font-weight: 400;
+              color: var(--font-color);
+            }
+            .form-item {
+              margin-bottom: 16px !important;
+
+              .ant-form-item-label {
+                padding-bottom: 0px;
+
+                .ant-form-item-required {
+                  color: var(--font-color-2);
+                  &::before {
+                    display: none;
+                  }
+                }
+              }
+              .ant-form-item-control {
+                input,
+                .ant-input-password {
+                  border-right: 0px;
+                  border-left: 0px;
+                  border-top: 0px;
+                  border-radius: 0px;
+
+                  &:focus {
+                    border-right: 0px;
+                    border-left: 0px;
+                    border-top: 0px;
+                    box-shadow: none !important;
+                  }
+                }
+
+                .ant-input-password {
+                  &:focus-within {
+                    box-shadow: none !important;
+                  }
+                }
+              }
+            }
+
+            .check-box {
+              margin-bottom: 0px;
+              .ant-form-item-row {
+                width: 100%;
+                display: flex;
+                .ant-form-item-control-input-content {
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  .check-box-card {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--primary-color);
+                    cursor: pointer;
+
+                    svg {
+                      font-size: 1.5rem;
+                    }
+
+                    &:hover {
+                      color: var(--on-hover-primary-color);
+                    }
+                  }
+                }
+              }
+            }
+
+            .ant-btn-variant-solid {
+              background-color: var(--primary-color);
+              width: 100%;
+              font-weight: 600;
+              font-size: 1rem;
+              line-height: 1.5rem;
+              &:hover {
+                background-color: var(--on-hover-primary-color);
+              }
+            }
+
+            .form-link {
+              display: flex;
+              flex-direction: column;
+
+              a {
+                display: flex;
+                align-items: center;
+                svg {
+                  font-size: 1.5rem;
+                }
+
+                &:hover {
+                  color: var(--on-hover-primary-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

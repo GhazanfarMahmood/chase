@@ -1,0 +1,75 @@
+.payment-card-container {
+  width: 100%;
+  .payment-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 75em;
+    margin: 0 auto;
+    padding: 0.5em 24px 1em 24px;
+    gap: 1.5em;
+
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+    .payment-card-card {
+      border: 1px solid var(--border-color);
+      width: 365px;
+
+      .payment-upper-part {
+        color: var(--light-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.3rem;
+        font-size: 1.5rem;
+        height: 130px;
+
+        h2 {
+          font-weight: 400;
+          font-size: 1.5rem;
+          width: 150px;
+        }
+        svg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .payment-text-card {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 0 1.3rem;
+        position: relative;
+
+        h3 {
+          font-size: 1.5rem;
+          width: 250px;
+          position: absolute;
+          top: 20px;
+        }
+        p {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        button {
+          font-size: 16px;
+          color: var(--light-color);
+          border: 0px;
+          outline: none;
+          border-radius: 5px;
+          background: var(--primary-color);
+          padding: 8px 10px;
+          width: 180px;
+          position: absolute;
+          bottom: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

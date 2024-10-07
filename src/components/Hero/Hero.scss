@@ -1,0 +1,90 @@
+.hero-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .hero-card {
+    width: 75em;
+    padding: 0 24px;
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+    .hero-box {
+      border-bottom: 1px solid var(--border-color);
+      padding: 2em 0;
+      &:first-child {
+        border-top: 1px solid var(--border-color);
+      }
+
+      .hero-item {
+        gap: 24px;
+        display: flex;
+
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        img {
+          width: 500px;
+          height: auto;
+
+          @media (max-width: 600px) {
+            width: 100%;
+          }
+        }
+
+        .hero-text {
+          h1 {
+            font-size: 3.125em;
+            line-height: 1.12em;
+            font-weight: 300;
+            margin: 0 0 0.48em 0;
+
+            @media (max-width: 768px) {
+              font-size: 2.25em;
+            }
+          }
+
+          P {
+            font-size: 1.125em;
+            margin: 0 0 1.25em 0;
+            font-weight: 400;
+            color: var(--font-color);
+            line-height: 1.375em;
+
+            @media (max-width: 768px) {
+              font-size: 1em;
+            }
+          }
+
+          button {
+            font-size: 1.125em;
+            padding: 0.62em 0;
+            line-height: 1;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            font-weight: 600;
+            border-radius: 0.313em;
+            width: 300px;
+            text-align: center;
+            border: 0px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: var(--on-hover-secondary-color);
+            }
+          }
+        }
+      }
+      .row-reverse {
+        flex-direction: row-reverse;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

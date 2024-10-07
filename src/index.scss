@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --primary-color: #0060f0;
+  --on-hover-primary-color: #0a4386;
+  --secondary-blue-color: #005eb8;
+  --secondary-color: #398100;
+  --on-hover-secondary-color: #1d5602;
+  --font-color: #414042;
+  --icon-color: #999;
+  --link-color: #126bc5;
+  --border-color: #ccc;
+  --font-color-2: #717171;
+  --light-color: #fff;
+  --dark-color: #000;
+}
