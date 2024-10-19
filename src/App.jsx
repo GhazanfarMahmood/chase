@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 // page
 import Home from "./pages/Home/Home";
@@ -7,19 +8,19 @@ import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-// Route from react-router-dom
-import { Route, Routes } from "react-router-dom";
 import LogIn from "./components/LogIn/LogIn";
 
 const App = () => {
+  const { pathname } = useLocation();
+
   return (
     <>
-      <Header />
+      {pathname !== "/Login" && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/login" element={<LogIn />} />
       </Routes>
-      <Footer />
+      {pathname !== "/Login" && <Footer />}
     </>
   );
 };

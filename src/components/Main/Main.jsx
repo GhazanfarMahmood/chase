@@ -44,19 +44,17 @@ const Main = () => {
                 <Form
                   onFinish={onFinish}
                   onFinishFailed={onFinishFailed}
-                  layout={"vertical"}
-                >
+                  layout={"vertical"}>
                   <Form.Item
                     className="form-item"
-                    label="Username"
+                    label="Email"
                     name="username"
                     rules={[
                       {
                         required: true,
                         message: "Please input your username!",
                       },
-                    ]}
-                  >
+                    ]}>
                     <Input />
                   </Form.Item>
 
@@ -69,20 +67,18 @@ const Main = () => {
                         required: true,
                         message: "Please input your password!",
                       },
-                    ]}
-                  >
+                    ]}>
                     <Input.Password />
                   </Form.Item>
 
                   <Form.Item
                     name="remember"
                     valuePropName="checked"
-                    className="check-box"
-                  >
+                    className="check-box">
                     <Checkbox>Remember me</Checkbox>
-                    <div className="check-box-card">
+                    {/* <div className="check-box-card">
                       Use token <MdKeyboardArrowRight />
-                    </div>
+                    </div> */}
                   </Form.Item>
                   <Form.Item style={{ marginBottom: "0px" }}>
                     <Button type="primary" htmlType="submit">
