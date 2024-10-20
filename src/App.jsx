@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import LogIn from "./components/LogIn/LogIn";
+import SignUp from "./pages/SignUp/SignUp";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       {pathname !== "/Login" && <Footer />}
     </>
