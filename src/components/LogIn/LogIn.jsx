@@ -6,6 +6,13 @@ import "./LogIn.scss";
 // logo
 import whiteLogo from "../../assets/white-logo.svg";
 
+const onFinish = (values) => {
+  console.log("Success:", values);
+};
+const onFinishFailed = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
+
 const LogIn = () => {
   return (
     <div className="LogIn">
@@ -21,12 +28,26 @@ const LogIn = () => {
           and choose &quot; Next.&quot;
         </p>
         <div>
-          <Form.Item label="One-time code" layout="vertical">
-            <Input placeholder="Basic usage" />
-          </Form.Item>
-          <Form.Item label="Password" layout="vertical">
-            <Input.Password placeholder="input password" />
-          </Form.Item>
+          <Form
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete="off"
+          >
+            <Form.Item
+              label="One-time code"
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Basic usage" />
+            </Form.Item>
+            <Form.Item
+              label="Password"
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input.Password placeholder="input password" />
+            </Form.Item>
+          </Form>
         </div>
         <div>
           Didn&#x2019;t get a code?
