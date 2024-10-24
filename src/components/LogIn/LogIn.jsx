@@ -5,15 +5,17 @@ import "./LogIn.scss";
 
 // logo
 import whiteLogo from "../../assets/white-logo.svg";
-
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
+import { Link, useNavigate } from "react-router-dom";
 
 const LogIn = () => {
+  const navigate = useNavigate();
+
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
   return (
     <div className="LogIn">
       <header>
@@ -31,31 +33,28 @@ const LogIn = () => {
           <Form
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
-            autoComplete="off"
-          >
+            autoComplete="off">
             <Form.Item
               label="One-time code"
               layout="vertical"
-              rules={[{ required: true }]}
-            >
+              rules={[{ required: true }]}>
               <Input placeholder="Basic usage" />
             </Form.Item>
             <Form.Item
               label="Password"
               layout="vertical"
-              rules={[{ required: true }]}
-            >
+              rules={[{ required: true }]}>
               <Input.Password placeholder="input password" />
             </Form.Item>
           </Form>
         </div>
         <div>
-          Didn&#x2019;t get a code?
-          <a href="/">Let&#x2019;s try it again&gt;</a>
+          Didn't get a code?
+          <Link to="/">Let&#x2019;s try it again&gt;</Link>
         </div>
         <div>
-          <button>Cancel</button>
-          <button>Next</button>
+          <button onClick={() => navigate("/")}>Cancel</button>
+          <button onClick={() => navigate("/dashboard")}>Next</button>
         </div>
       </div>
     </div>

@@ -17,14 +17,14 @@ const App = () => {
 
   return (
     <>
-      {pathname !== "/Login" && <Header />}
+      {pathname === "/" && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      {pathname !== "/Login" && <Footer />}
+      {pathname === "/" && <Footer />}
     </>
   );
 };

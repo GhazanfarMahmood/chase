@@ -8,14 +8,19 @@ import { Form, Input, Checkbox, Button } from "antd";
 
 //react icons
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link, useNavigate } from "react-router-dom";
 
 const Main = () => {
+  const navigate = useNavigate();
+
   const onFinish = (values) => {
+    navigate("/login");
     console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
   return (
     <div className="main-container">
       <div className="main-box"></div>
@@ -86,12 +91,12 @@ const Main = () => {
                     </Button>
                   </Form.Item>
                   <div className="form-link">
-                    <a href="/">
-                      Forgot username/password? <MdKeyboardArrowRight />
-                    </a>
-                    <a href="/">
+                    <Link to="/forgot-password">
+                      Forgot password? <MdKeyboardArrowRight />
+                    </Link>
+                    <Link to="sign-up">
                       Not Enrolled? Sign Up Now. <MdKeyboardArrowRight />
-                    </a>
+                    </Link>
                   </div>
                 </Form>
               </div>
