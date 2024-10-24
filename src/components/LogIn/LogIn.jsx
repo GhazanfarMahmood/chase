@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Form } from "antd";
+import { Input, Form, Button } from "antd";
 // css
 import "./LogIn.scss";
 
@@ -33,17 +33,20 @@ const LogIn = () => {
           <Form
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
-            autoComplete="off">
+            autoComplete="off"
+          >
             <Form.Item
               label="One-time code"
               layout="vertical"
-              rules={[{ required: true }]}>
+              rules={[{ required: true }]}
+            >
               <Input placeholder="Basic usage" />
             </Form.Item>
             <Form.Item
               label="Password"
               layout="vertical"
-              rules={[{ required: true }]}>
+              rules={[{ required: true }]}
+            >
               <Input.Password placeholder="input password" />
             </Form.Item>
           </Form>
@@ -53,8 +56,8 @@ const LogIn = () => {
           <Link to="/">Let&#x2019;s try it again&gt;</Link>
         </div>
         <div>
-          <button onClick={() => navigate("/")}>Cancel</button>
-          <button onClick={() => navigate("/dashboard")}>Next</button>
+          <Button onClick={() => navigate("/")}>Cancel</Button>
+          <Button onClick={() => navigate("/dashboard")}>Next</Button>
         </div>
       </div>
     </div>

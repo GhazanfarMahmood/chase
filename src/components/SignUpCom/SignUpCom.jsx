@@ -104,9 +104,7 @@ const SignUp = () => {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
           <div className="btn">
-            <Button htmlType="cancel" disabled>
-              Cancel
-            </Button>
+            <Button htmlType="cancel">Cancel</Button>
             <Button type="primary" htmlType="submit">
               Next
             </Button>
