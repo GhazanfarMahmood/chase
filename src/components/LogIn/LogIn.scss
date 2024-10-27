@@ -64,7 +64,7 @@
       width: 400px;
 
       .ant-form-item {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
         label {
           font-size: 20px;
         }
@@ -89,16 +89,8 @@
           }
         }
 
-        & > :last-child {
-          margin-bottom: 55px;
-
-          @media (max-width: 575px) {
-            margin-bottom: 20px;
-          }
-        }
-
-        @media (max-width: 575px) {
-          margin-bottom: 9px;
+        .ant-form-item-control {
+          flex: none;
         }
       }
 
@@ -132,10 +124,11 @@
       button {
         border: 0px;
         border-radius: 4px;
-        padding-block: 9px;
+        padding-block: 21px;
         font-size: 19px;
         width: 200px;
-        font-weight: 500px;
+        font-weight: 500;
+        background: #dddbdb;
 
         @media (max-width: 640px) {
           width: 100%;
@@ -143,6 +136,11 @@
       }
       & > :first-child {
         margin-left: auto;
+
+        &:hover {
+          background: #d1d0d0;
+          color: #000;
+        }
 
         @media (max-width: 640px) {
           margin-left: 0px;

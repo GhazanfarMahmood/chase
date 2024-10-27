@@ -41,7 +41,7 @@
       width: 100%;
 
       .ant-form-item {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
         label {
           font-size: 20px;
         }
@@ -63,8 +63,8 @@
           }
         }
 
-        @media (max-width: 575px) {
-          margin-bottom: 9px;
+        .ant-form-item-control {
+          flex: none;
         }
       }
       @media (max-width: 768px) {
@@ -74,19 +74,47 @@
 
     .btn {
       display: flex;
-      align-items: center;
-      justify-content: start;
       gap: 10px;
       width: 100%;
-
-      @media (max-width: 425px) {
-        flex-direction: column;
-      }
+      margin-top: 15px;
 
       button {
-        @media (max-width: 425px) {
+        border: 0px;
+        border-radius: 4px;
+        padding-block: 21px;
+        font-size: 19px;
+        width: 200px;
+        font-weight: 500;
+        background: #dddbdb;
+
+        @media (max-width: 640px) {
           width: 100%;
         }
+      }
+      & > :first-child {
+        margin-left: auto;
+
+        &:hover {
+          background: #d1d0d0;
+          color: #000;
+        }
+
+        @media (max-width: 640px) {
+          margin-left: 0px;
+        }
+      }
+      & > :last-child {
+        background-color: var(--on-hover-primary-color);
+        color: var(--light-color);
+      }
+
+      @media (max-width: 640px) {
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width: 475px) {
+        flex-direction: column;
       }
     }
   }
