@@ -34,41 +34,37 @@
       text-align: center;
     }
 
-    .wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
-      width: 100%;
-
-      .ant-form-item {
-        margin-bottom: 15px;
-        label {
-          font-size: 20px;
-        }
-        .ant-picker-outlined {
-          width: 100%;
-        }
-        .ant-input-password {
-          padding-left: 0px;
-        }
-        .ant-select-selector,
-        input {
-          padding-inline: 15px;
-          font-size: 20px;
-        }
-        .ant-select-outlined {
-          height: 100%;
-          .ant-select-selector {
-            height: 41.89px;
-          }
-        }
-
-        .ant-form-item-control {
-          flex: none;
+    .ant-form-item {
+      max-width: 400px;
+      .ant-form-item-control {
+        flex: none;
+      }
+      .ant-col {
+        min-height: auto;
+      }
+      label {
+        font-size: 20px;
+      }
+      .ant-picker-outlined {
+        width: 100%;
+      }
+      .ant-input-password {
+        padding-left: 0px;
+      }
+      .ant-select-selector,
+      input {
+        padding-inline: 15px;
+        font-size: 20px;
+      }
+      .ant-select-outlined {
+        height: 100%;
+        .ant-select-selector {
+          height: 41.89px;
         }
       }
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+
+      @media (max-width: 1024px) {
+        margin-inline: auto;
       }
     }
 
@@ -77,6 +73,7 @@
       gap: 10px;
       width: 100%;
       margin-top: 15px;
+      margin-bottom: 20px;
 
       button {
         border: 0px;
@@ -119,6 +116,3 @@
     }
   }
 }
-
-// margin-top: 80px;
-// width: 400px;

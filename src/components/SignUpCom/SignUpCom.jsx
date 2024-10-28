@@ -80,14 +80,6 @@ const SignUp = () => {
               <Input.Password placeholder="Confirm Password" />
             </Form.Item>
             <Form.Item
-              label="Residential Address"
-              name={"address"}
-              layout="vertical"
-              rules={[{ required: true }]}
-            >
-              <Input placeholder="Your Address" />
-            </Form.Item>
-            <Form.Item
               label="Account Type"
               name={"account"}
               layout="vertical"
@@ -98,6 +90,62 @@ const SignUp = () => {
                 <Option value="Checking">Checking</Option>
                 <Option value="Business">Business</Option>
               </Select>
+            </Form.Item>
+            <Form.Item
+              label="Social Security"
+              name={"security"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Social Security" />
+            </Form.Item>
+            <Form.Item
+              label="Phone Number"
+              name={"number"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Enter your number" />
+            </Form.Item>
+            <Form.Item
+              label="Address"
+              name={"address"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Your Address" />
+            </Form.Item>
+            <Form.Item
+              label="Address 2"
+              name={"address_2"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Your Address" />
+            </Form.Item>
+            <Form.Item
+              label="City (Optional)"
+              name={"city"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Your City" />
+            </Form.Item>
+            <Form.Item
+              label="State (Optional)"
+              name={"state"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="Your State" />
+            </Form.Item>
+            <Form.Item
+              label="ZipCode (Optional)"
+              name={"zipcode"}
+              layout="vertical"
+              rules={[{ required: true }]}
+            >
+              <Input placeholder="ZipCode" />
             </Form.Item>
           </div>
           <Form.Item>
