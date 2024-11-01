@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Modal } from "antd";
 
 //REACT ICON
 import { FaPlane, FaStopCircle } from "react-icons/fa";
@@ -10,6 +11,27 @@ import "./Account.scss";
 import { Collapse } from "antd";
 
 const Account = () => {
+  const [isPaymentSuccessOpen, setIsPaymentSuccessOpen] = useState(false);
+  const [isPaymentFailedOpen, setIsPaymentFailedOpen] = useState(false);
+
+  const showSuccessModal = () => {
+    setIsPaymentSuccessOpen(true);
+  };
+
+  const showFailedModal = () => {
+    setIsPaymentFailedOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsPaymentSuccessOpen(false);
+    setIsPaymentFailedOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsPaymentSuccessOpen(false);
+    setIsPaymentFailedOpen(false);
+  };
+
   return (
     <div className="account">
       <div className="container">
@@ -104,6 +126,69 @@ const Account = () => {
                 </span>
               </div>
             </div>
+          </div>
+
+          <div className="modal">
+            <Button type="primary" onClick={showSuccessModal}>
+              Payment Succeed
+            </Button>
+            <Modal
+              title="Payment Sent"
+              open={isPaymentSuccessOpen}
+              onOk={handleOk}
+              onCancel={handleCancel}
+            >
+              <div className="firstBox">
+                <h2>Zelle®</h2>
+                <p>Successfully sent $1500.00 to Mastha B...</p>
+                <div className="content">
+                  <div>
+                    <span>Send to </span> Jourdain F.
+                  </div>
+                  <div>
+                    <span>Phone or email</span> Jayd...@gmail.com
+                  </div>
+                  <div>
+                    <span>Amount</span> $500.00
+                  </div>
+                  <div>
+                    <span>From Account</span>Checking ...8008
+                  </div>
+                  <div>Memo</div>
+                </div>
+              </div>
+            </Modal>
+
+            <Button type="primary" onClick={showFailedModal}>
+              Payment Failed
+            </Button>
+            <Modal
+              title="Payment Failed"
+              open={isPaymentFailedOpen}
+              onOk={handleOk}
+              onCancel={handleCancel}
+            >
+              <div className="secondBox">
+                <h2>Zelle®</h2>
+                <p>Failed to send $500.00 to Jourdain F.....</p>
+                <p>Note: Due to insufficient funds</p>
+                <div className="content">
+                  <div>
+                    <span>Send to </span> Jourdain F.
+                  </div>
+                  <div>
+                    <span>Phone or email</span> Jayd...@gmail.com
+                  </div>
+                  <div>
+                    <span>Amount</span> $500.00
+                  </div>
+                  <div>
+                    <span>From Account</span>Checking ...8008
+                  </div>
+                  <div>Memo</div>
+                </div>
+              </div>
+            </Modal>
           </div>
         </div>
       </div>
