@@ -1,0 +1,183 @@
+.payAndTransfer {
+  width: 100%;
+  background: lightgoldenrodyellow;
+  padding-top: 20px;
+  .container {
+    max-width: 1300px;
+    padding-inline: 15px;
+    margin-inline: auto;
+
+    .head > :first-child {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    .wrapper {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        padding-top: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.164);
+        border-radius: 5px;
+
+        svg {
+          color: var(--primary-color);
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+        & > :nth-child(2) {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        div {
+          width: 90%;
+          text-align: start;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+        & > :last-child {
+          width: 100%;
+          font-weight: bold;
+          border-top: 1px solid rgba(0, 0, 0, 0.164);
+          margin-top: 20px;
+          margin-bottom: unset;
+          a {
+            width: 100%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            padding: 15px 20px;
+          }
+          & > :first-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.164);
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .box {
+      width: 100%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.164);
+      border-radius: 5px;
+      margin-block: 20px;
+
+      .tableContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > :first-child {
+          & > :first-child {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            svg {
+              color: var(--primary-color);
+              font-size: 20px;
+            }
+          }
+        }
+
+        .ant-select {
+          width: 200px !important;
+
+          .ant-select-selector {
+            border-radius: 0;
+            border: 1px solid rgba(0, 0, 0, 0.164);
+            font-size: 16px;
+            margin-left: 8px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: start;
+          gap: 20px;
+        }
+      }
+      table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        tr {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 2px solid #000;
+          padding-bottom: 10px;
+
+          th {
+            width: 100%;
+            text-align: start;
+          }
+          td {
+            width: 100%;
+            padding-block: 10px 15px;
+
+            @media (max-width: 768px) {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: var(--primary-color);
+            margin-left: 10px;
+
+            @media (max-width: 768px) {
+              margin-left: 0;
+            }
+          }
+
+          @media (max-width: 576px) {
+            & > :nth-child(2) {
+              display: none;
+            }
+            & > :nth-child(3) {
+              display: none;
+            }
+            & > :last-child {
+              text-align: end;
+            }
+          }
+        }
+
+        & > :where(:nth-child(2), :nth-child(3)) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.164) !important;
+        }
+      }
+    }
+  }
+}
