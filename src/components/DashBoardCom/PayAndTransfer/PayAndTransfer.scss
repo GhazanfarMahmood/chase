@@ -1,7 +1,7 @@
 .payAndTransfer {
   width: 100%;
   background: lightgoldenrodyellow;
-  padding-top: 20px;
+  padding-block: 20px;
   .container {
     max-width: 1300px;
     padding-inline: 15px;
@@ -84,7 +84,7 @@
       padding: 30px;
       border: 1px solid rgba(0, 0, 0, 0.164);
       border-radius: 5px;
-      margin-block: 20px;
+      margin-top: 20px;
 
       .tableContent {
         width: 100%;
