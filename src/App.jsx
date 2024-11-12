@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import LogIn from "./components/LogIn/LogIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import ScheduleTransfer from "./components/DashBoardCom/ScheduleTransfer/ScheduleTransfer";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/login" element={<LogIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="scheduleTransfer" element={<ScheduleTransfer />} />
       </Routes>
       {pathname === "/" && <Footer />}
     </>
